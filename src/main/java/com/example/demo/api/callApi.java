@@ -49,7 +49,7 @@ public class callApi {
         }
 
         System.out.println(inline);
-        scanner.close();
+        scanner.close(); //batur
 
         JSONObject jsonObject = new JSONObject(inline);
         usdAlis = jsonObject.getString("dolar");
