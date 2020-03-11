@@ -21,7 +21,7 @@ import static com.example.demo.api.callApi.*;
 @Controller
 public class getCurrency {
 
-    @Scheduled(fixedRate = 1000)
+    //@Scheduled(fixedRate = 1000)
     public void methodilogi() throws IOException, JSONException {
         System.out.println("batur methodu çalıştı");
         callApi api = new callApi();
@@ -30,7 +30,9 @@ public class getCurrency {
     }
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String homePage(Model model)  {
+    public String homePage(Model model) throws IOException, JSONException {
+
+        methodilogi();
 
         model.addAttribute("usdAlis", usdAlis);
         model.addAttribute("usdSatis", usdSatis);
